@@ -119,63 +119,51 @@
                 <!--placeholder content CHANGE-->
                 <!--CODE EXPLANATION-->
                 <div class="col-lg-4">
-                    <p>The code solves the classic interview question with three (3) possible iterators.</p>
-                    <h5 class="logoFont">.JS FIZZ BUZZ</h5>
+                    <p>The code solves this JavaScript challenge reverses a string and checks for a palindrome.</p>
+                    <h5 class="logoFont">TACO CAT</h5>
                     <p>
-                        As the quintessential JavaScript interview question, this coding exercise
-                        loops through and displays numbers 1 to 100. Numbers divisible by
-                        user input, <strong>Fizz</strong> are replaced by the word,<span class="logoFont Fizz">
-                            Fizz</span>. Numbers divisible by user input, <strong>Buzz</strong> are
-                        replaced by the word, <span class="logoFont Buzz">Buzz</span>.
-                        When a number is divisible by both <strong>Fizz </strong> AND
-                        <strong>Buzz </strong> it is replaced by the word,
-                        <span class="logoFont FizzBuzz">FizzBuzz</span>.
+                        Backwards and Forwards--the mystery of the palindrome. This Javascript coding exercise
+                        takes a forward-looking string, reverses it and compares the user-inputed string to the reverse string to see if a palindrome exists.
 
                     </p>
                     <h4>Brief code overview:</h4>
                     <ul>
                         <li><strong> Initiation:</strong>
                             <ul>
+                                
                                 <li> the event listener (located in the bottom &lt;script&gt; tag on the app page) is
                                     triggered by a
                                     <em>click</em> on the <em>submit</em> button;
-                                </li><br>
-                                <li>values from the two user input fields (<em>fizzValue</em> and <em>buzzValue</em>)
-                                    are passed into
-                                    the <em>Get Values</em> function;</li><br>
+                                    <li>A classlist.add is placed on the <em>alert</em> to hide it on the page until the <em>DisplayData</em> function is called. </li>
+                                </li>
+                                <li> the value from the user input field (<em>userString</em>)
+                                    is passed into the <em>Get Values</em> function;</li>
                             </ul>
-
-                        </li>
+                        </li><br>
                         <li><strong>Validation: </strong>
-                            <ul>
-                                <li>inputs are checked to make certain they are integers (numbers) and not strings;</li>
-                                <br>
+                          <ul>
+                              <li>No validation is needed since differentiation between integers and strings are unnecessary; the program will treat
+                            numbers as strings;
 
-                                <li>if inputs are numbers treated as strings, the program parses them to integers;</li>
-                                <br>
-                                <li>If inputs are text, the system will alert the user, "You must enter numbers";</li>
-                                <br>
-                            </ul>
-                        </li>
+                              </li>
+                          </ul>  
+                        </li><br>
                         <li><strong>Logic: </strong>
-                            <p> When the <em>fizzBuzz</em> function is called by declaring <em>fbArray</em>, the
+                            <p> When the <em>ckPalindrome</em> function is called by declaring <em>returnObject</em>, the
                                 following processes
                                 occur:
                             </p>
                             <ul>
-                                <li>the <em>returnArray</em> array is created;</li> <br>
-
-                                <li>the <em>for</em> loop begins at one (1) and increments the number by one until the
-                                    incremented
-                                    number is equal to 100;</li><br>
-                                <li>each incremented number passes through a boolean test(s) to determine if the number
-                                    is to be
-                                    replaced by the word, <span class="logoFont Fizz">Fizz</span>, <span
-                                        class="logoFont Buzz">Buzz
-                                    </span> or <span class="logoFont FizzBuzz">FizzBuzz</span> (more information in the
-                                    <strong>Display</strong> section below); </li><br>
-                                <li>results of each iteration is passed to the <em>returnArray</em> array; </li><br>
-                                <li>the function returns the <em>returnArray</em> array;</li><br>
+                                <li>All the characters in the <em>userString</em> are set to lowercase to remove casing errors in camparison;</li> 
+                                <li>A regular operator, or  <em>regex</em>, is used to remove all special characters and spaces;</li> 
+                                <li>the <em>reverseString</em> Array is declared in order to hold the reversed userString contents;</li> 
+                                <li>the <em>returnObject</em> object is declared and will hold two properties: the message and the reverseString;</li> 
+                                <li>the decrementing <em>for</em> loop begins at the last index position of the <em>userString</em> and decrements the string until index is less than or equal to zero. 
+                                </li>
+                                <li>results of each iteration is passed to the <em>reverseString</em></li>
+                                <li>In the if/else if statement the <em>reverseString</em> is tested against the <em>userString</em></li>
+                                
+                                <li>the results are passed to the <em>returnObject</em></li><br>
                             </ul>
                     </ul>
                     </ul>
@@ -187,30 +175,8 @@
                         <li><strong>Display: </strong></li>
 
                         <li>Inside the <em>for</em> loop: </li>
-                        <ul>
-                            <li>A boolean tests each number for the following conditions: </li><br>
-                            <ul>
-                                <li>Numbers divisible by <em>Fizz</em> AND <em>Buzz</em> are pushed to the
-                                    <em>returnArray</em> array as
-                                    <span class="logoFont FizzBuzz">FizzBuzz</span> ;</li><br>
-                                <li>Numbers divisible by <em>Fizz</em> are pushed to the <em>returnArray</em> array as
-                                    <span class="logoFont Fizz">Fizz</span> ;</li><br>
-                                <li>Numbers divisible by <em>Buzz</em> are pushed to the <em>returnArray</em> array as
-                                    <span class="logoFont Buzz">Buzz</span> ;
-                                </li><br>
-
-                                <li>Numbers testing <strong>false</strong> for all conditions are pushed to the
-                                    <em>returnArray</em>
-                                    array unchanged;</li><br>
-                            </ul>
-                            <li>The .js file to the left gives three possible ways to test the iterators:</li><br>
-                            <ul>
-                                <li>if/if else/else statement&#40;see <em>function fizzBuzzA</em>&#41;;</li>
-                                <li>switch case statement&#40;see <em>function fizzBuzzB</em>&#41;;</li>
-                                <li>ternary operator&#40;see <em>function fizzBuzzC</em>&#41;;</li><br>
-                            </ul>
-                        </ul>
-                        <li>Display table:<ul><br>
+                        
+                        
                                 <li>created using an HTML fragment as an alternative to template literals;</li>
                                 <li>table rows&#40;in this case, five cells across&#41; are populated by the
                                     <em>for</em> loop passing
