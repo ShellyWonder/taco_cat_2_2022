@@ -119,10 +119,10 @@
                 <!--placeholder content CHANGE-->
                 <!--CODE EXPLANATION-->
                 <div class="col-lg-4">
-                    <p>The code solves this JavaScript challenge reverses a string and checks for a palindrome.</p>
+                    <p>This JavaScript challenge reverses a string and checks for a palindrome.</p>
                     <h5 class="logoFont">TACO CAT</h5>
                     <p>
-                        Backwards and Forwards--the mystery of the palindrome. This Javascript coding exercise
+                        Backwards and forwards--the mystery of the palindrome. This Javascript coding exercise
                         takes a forward-looking string, reverses it and compares the user-inputed string to the reverse string to see if a palindrome exists.
 
                     </p>
@@ -141,12 +141,11 @@
                             </ul>
                         </li><br>
                         <li><strong>Validation: </strong>
-                          <ul>
-                              <li>No validation is needed since differentiation between integers and strings are unnecessary; the program will treat
-                            numbers as strings;
+                          
+                              <p>No validation is needed since differentiation between integers and strings is unnecessary; the program will treat
+                            numbers as strings.</p>
 
-                              </li>
-                          </ul>  
+                           
                         </li><br>
                         <li><strong>Logic: </strong>
                             <p> When the <em>ckPalindrome</em> function is called by declaring <em>returnObject</em>, the
@@ -154,14 +153,14 @@
                                 occur:
                             </p>
                             <ul>
-                                <li>All the characters in the <em>userString</em> are set to lowercase to remove casing errors in camparison;</li> 
+                                <li>All the characters in the <em>userString</em> are set to lowercase to remove casing errors in camparison</li> 
                                 <li>A regular operator, or  <em>regex</em>, is used to remove all special characters and spaces;</li> 
                                 <li>the <em>reverseString</em> Array is declared in order to hold the reversed userString contents;</li> 
                                 <li>the <em>returnObject</em> object is declared and will hold two properties: the message and the reverseString;</li> 
                                 <li>the decrementing <em>for</em> loop begins at the last index position of the <em>userString</em> and decrements the string until index is less than or equal to zero. 
                                 </li>
                                 <li>results of each iteration is passed to the <em>reverseString</em></li>
-                                <li>In the if/else if statement the <em>reverseString</em> is tested against the <em>userString</em></li>
+                                <li>In the if/else if statement the <em>reverseString</em> is tested against the <em>userString</em> (refer to the code on this page)</li>
                                 
                                 <li>the results are passed to the <em>returnObject</em></li><br>
                             </ul>
@@ -174,13 +173,13 @@
                     <ul>
                         <li><strong>Display: </strong></li>
 
-                        <li>Inside the <em>for</em> loop: </li>
+                        Inside the <em>DisplayData</em> function: 
                         
-                        
-                                <li>created using an HTML fragment as an alternative to template literals;</li>
-                                <li>table rows&#40;in this case, five cells across&#41; are populated by the
-                                    <em>for</em> loop passing
-                                    data to the <em>fbArray</em> when the <em>displayData </em>function is called;</li>
+                            <ul>
+                                <li>A classlist.remove is placed on the <em>alert</em> to make it visable on the page </li>
+                                <li>the returnObject.msg (determined in the if statement described above) is printed to the page announcing the palindrome results;</li>
+                                <li>the returnObject.reversed results are also printed on the page</li>
+                                
                             </ul>
                         </li>
 
